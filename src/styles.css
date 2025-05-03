@@ -1,1 +1,5 @@
 @import 'tailwindcss';
+
+#app {
+  @apply px-4;
+}

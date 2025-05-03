@@ -1,8 +1,8 @@
 <template>
   <div>
-    <header>
+    <header v-if="$slots.header">
       <slot name="header">
-        <h2>The Default</h2>
+        <!-- <h2>The Default</h2> -->
       </slot>
     </header>
     <slot></slot>
@@ -10,9 +10,11 @@
 </template>
 
 <script>
-// export default {
-//   props: [''],
-// }
+export default {
+  mounted() {
+    console.log(this.$slots.header)
+  },
+}
 </script>
 <style scoped>
 header {
